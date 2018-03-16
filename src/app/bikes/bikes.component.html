@@ -1,0 +1,16 @@
+<h2>Bikes</h2>
+
+  <mat-input-container style="width:30%">
+    <input matInput [(ngModel)]="newBike.model" placeholder="Model" name="model">
+  </mat-input-container><br>
+  
+  <mat-input-container style="width:30%">
+    <input matInput [(ngModel)]="newBike.manufacturer" placeholder="Manufacturer" name="manufacturer">
+  </mat-input-container><br>
+  <button mat-raised-button (click)="createBike(newBike)">Create Bike</button>
+
+  <mat-list>
+    <mat-list-item *ngFor="let bike of bikes" (click)="showInfo(bike)">
+          {{bike.model}} <button mat-raised-button (click)="deleteBike(bike); $event.stopPropagation()">Delete</button>
+    </mat-list-item>
+  </mat-list>

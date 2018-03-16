@@ -1,0 +1,12 @@
+<mat-card *ngIf="bike" style="width: 30%">
+  <mat-input-container>
+    <input matInput [(ngModel)]="bike.model" placeholder="Model" name="model">
+  </mat-input-container><br>
+  <mat-input-container>
+    <input matInput [(ngModel)]="bike.manufacturer" placeholder="Manufacturer" name="manufacturer">
+  </mat-input-container><br>
+  <mat-card-actions>
+    <button mat-button (click)="goBack()"> Back </button>
+    <button mat-button (click)="updateBike()"> Update </button>
+  </mat-card-actions>
+</mat-card>
